@@ -1,0 +1,4 @@
+export const ACCOUNTS = {
+  CUENTACORRIENTE: "CC",
+  CUANTAAHORRO: "CA"
+}
