@@ -3,8 +3,8 @@ import { Accounts } from "../pages/Accounts/Accounts";
 import { useFetch } from "../hook/useFetch";
 import { mockGlobalFetch } from "./mock/fetchMock";
 import { vi, expect, test } from "vitest";
-import { AccountsComponent } from "../pages/Accounts/components/AccountsComponent";
 import { renderHook } from "@testing-library/react-hooks";
+import AccountList from "../pages/Accounts/components/AccountList";
 
 vi.mock("react-router-dom", async () => {
   const mod = await vi.importActual("react-router-dom");
@@ -30,7 +30,7 @@ describe("Accounts", () => {
     expect(accountsComponent).toBeDefined();
     await waitForNextUpdate();
     expect(
-      render(<AccountsComponent {...result.current.data} />)
+      render(<AccountList accountList={result.current.data.cuentas} />)
     ).toBeDefined();
   });
 });

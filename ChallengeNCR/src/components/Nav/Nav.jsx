@@ -1,4 +1,5 @@
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+
 export const Nav = () => {
   return (
     <nav className="bg-[#7ccc72] py-4">
